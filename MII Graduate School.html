@@ -1,0 +1,920 @@
+<!DOCTYPE html>
+<!-- saved from url=(0026)http://www.msit.mut.ac.th/ -->
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <title>MII Graduate School</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+
+    <!-- Favicon -->
+    <link href="http://www.msit.mut.ac.th/img/favicon.png" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com/">
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
+    <link href="./MII Graduate School_files/css2" rel="stylesheet">
+
+    <!-- Icon Font Stylesheet -->
+    <link href="./MII Graduate School_files/all.min.css" rel="stylesheet">
+    <link href="./MII Graduate School_files/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="./MII Graduate School_files/animate.min.css" rel="stylesheet">
+    <link href="./MII Graduate School_files/owl.carousel.min.css" rel="stylesheet">
+    <link href="./MII Graduate School_files/lightbox.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="./MII Graduate School_files/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="./MII Graduate School_files/style.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <script src="lang/en.js"></script>
+    <!-- 默认语言为英文 -->
+    <script>
+    function changeLanguage(language) {
+        let langFile = 'lang/' + language + '.js';
+        $.getScript(langFile, function() {
+            translatePage();
+        });
+    }
+
+    function translatePage() {
+        console.log('Translating page...'); // 添加这行代码
+
+        $('[data-translate]').each(function() {
+            let key = $(this).data('translate');
+            console.log('Key:', key); // 添加这行代码
+
+            if (lang[key]) {
+                $(this).text(lang[key]);
+            }
+        });
+        $('[data-translate-title]').each(function() {
+            let key = $(this).data('translate-title');
+            if (lang[key]) {
+                $(this).attr('title', lang[key]);
+            } else {
+            console.log('Translation not found for key:', key); // 添加这行代码
+        }
+        });
+        $('[data-translate-placeholder]').each(function() {
+            let key = $(this).data('translate-placeholder');
+            if (lang[key]) {
+                $(this).attr('placeholder', lang[key]);
+            }
+        });
+    }
+    $(document).ready(function() {
+        translatePage(); // 页面加载时翻译
+    });
+    </script>
+    <style>
+    .language-switcher {
+        display: flex;
+        justify-content: flex-end; /* Aligns items to the right */
+        align-items: center; /* Vertically centers items */
+        padding: 0 15px; /* Adds some padding to the left and right */
+    }
+
+    .language-switcher button {
+        background-color: transparent;
+        border: none;
+        color: white; /* Or any color that fits your design */
+        padding: 5px 10px;
+        margin-left: 5px; /* Adds spacing between buttons */
+        cursor: pointer;
+        transition: color 0.3s ease; /* Optional: for a smooth transition effect */
+    }
+
+    .language-switcher button:hover {
+        color: #ddd; /* Optional: a slightly different color on hover */
+    }
+    </style>
+</head>
+
+<body>
+    <!-- Spinner Start -->
+    <div id="spinner"
+        class="bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+        <div class="spinner-border position-relative text-primary" style="width: 6rem; height: 6rem;" role="status"></div>
+        <i class="fa fa-laptop-code fa-2x text-primary position-absolute top-50 start-50 translate-middle"></i>
+    </div>
+    <!-- Spinner End -->
+
+
+    <!-- Topbar Start -->
+    <div class="container-fluid bg-light px-0 wow fadeIn" data-wow-delay="0.1s"
+        style="visibility: visible; animation-delay: 0.1s; animation-name: fadeIn;">
+        <div class="row gx-0 align-items-center d-none d-lg-flex">
+            <div class="col-lg-6 px-5 text-start">
+                <ol class="breadcrumb mb-0">
+                    <li class="breadcrumb-item"><a class="small text-secondary" href="http://www.msit.mut.ac.th/#"
+                            data-translate="หน้าหลัก">หน้าหลัก</a></li>
+                    <li class="breadcrumb-item"><a class="small text-secondary" href="http://www.msit.mut.ac.th/#"
+                            data-translate="หลักสูตร">หลักสูตร</a></li>
+                    <li class="breadcrumb-item"><a class="small text-secondary" href="http://www.msit.mut.ac.th/#"
+                            data-translate="Terms">Terms</a></li>
+                    <li class="breadcrumb-item"><a class="small text-secondary" href="http://www.msit.mut.ac.th/#"
+                            data-translate="Privacy">Privacy</a></li>
+                </ol>
+            </div>
+            <div class="col-lg-6 px-5 text-end">
+                <small data-translate="Follow us:">Follow us:</small>
+                <div class="h-100 d-inline-flex align-items-center">
+                    <a class="btn-square text-primary border-end rounded-0" href="http://www.msit.mut.ac.th/"><i
+                            class="fab fa-facebook-f"></i></a>
+                    <a class="btn-square text-primary border-end rounded-0" href="http://www.msit.mut.ac.th/"><i
+                            class="fab fa-twitter"></i></a>
+                    <a class="btn-square text-primary border-end rounded-0" href="http://www.msit.mut.ac.th/"><i
+                            class="fab fa-linkedin-in"></i></a>
+                    <a class="btn-square text-primary pe-0" href="http://www.msit.mut.ac.th/"><i
+                            class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Topbar End -->
+
+
+    <!-- Brand & Contact Start -->
+    <div class="container-fluid py-4 px-5 wow fadeIn" data-wow-delay="0.1s"
+        style="visibility: visible; animation-delay: 0.1s; animation-name: fadeIn;">
+        <div class="row align-items-center top-bar">
+            <div class="col-lg-4 col-md-12 text-center text-lg-start">
+                <a href="http://www.msit.mut.ac.th/" class="navbar-brand m-0 p-0">
+                    <img src="./MII Graduate School_files/miig_logo_sm.png" alt="Logo">
+                </a>
+            </div>
+            <div class="col-lg-8 col-md-7 d-none d-lg-block">
+                <div class="row">
+                    <div class="col-4">
+                        <div class="d-flex align-items-center justify-content-end">
+                            <div class="flex-shrink-0 btn-lg-square border rounded-circle">
+                                <i class="far fa-clock text-primary"></i>
+                            </div>
+                            <div class="ps-3">
+                                <p class="mb-2" data-translate="Opening Hour">Opening Hour</p>
+                                <h6 class="mb-0" data-translate="Mon - Fri, 9:00 - 17:00
+Sat - Sun, 8:30 - 16:30">Mon - Fri, 9:00 - 17:00<br>Sat - Sun, 8:30 - 16:30</h6>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-4">
+                        <div class="d-flex align-items-center justify-content-end">
+                            <div class="flex-shrink-0 btn-lg-square border rounded-circle">
+                                <i class="fa fa-phone text-primary"></i>
+                            </div>
+                            <div class="ps-3">
+                                <p class="mb-2" data-translate="Call Us">Call Us</p>
+                                <h6 class="mb-0">02-988-3655 ต่อ 1201</h6>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-4">
+                        <div class="d-flex align-items-center justify-content-end">
+                            <div class="flex-shrink-0 btn-lg-square border rounded-circle">
+                                <i class="far fa-envelope text-primary"></i>
+                            </div>
+                            <div class="ps-3">
+                                <p class="mb-2" data-translate="Email Us">Email Us</p>
+                                <h6 class="mb-0">itgrad@mut.ac.th</h6>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Brand & Contact End -->
+
+
+    <!-- Navbar Start -->
+    <nav class="navbar navbar-expand-lg bg-primary navbar-dark sticky-top py-lg-0 px-lg-5 wow fadeIn"
+        data-wow-delay="0.1s" style="visibility: visible; animation-delay: 0.1s; animation-name: fadeIn;">
+        <a href="http://www.msit.mut.ac.th/#" class="navbar-brand ms-3 d-lg-none" data-translate="MENU">MENU</a>
+        <button type="button" class="navbar-toggler me-3" data-bs-toggle="collapse"
+            data-bs-target="#navbarCollapse">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <div class="navbar-nav me-auto p-3 p-lg-0">
+                <a class="nav-item nav-link active" href="http://www.msit.mut.ac.th/index.php"
+                    data-translate="หน้าหลัก">หน้าหลัก</a>
+                <div class="nav-item dropdown">
+                    <a href="http://www.msit.mut.ac.th/#" class="nav-link dropdown-toggle"
+                        data-bs-toggle="dropdown" data-translate="หลักสูตร">หลักสูตร</a>
+                    <div class="dropdown-menu border-0 rounded-0 rounded-bottom m-0">
+                        <a href="http://www.msit.mut.ac.th/#" class="dropdown-item"
+                            data-translate="วิทยาศาสตรมหาบัณฑิต สาขาวิชาเทคโนโลยีสารสนเทศ (M.S. IT)">วิทยาศาสตรมหาบัณฑิต
+                            สาขาวิชาเทคโนโลยีสารสนเทศ (M.S. IT)</a>
+                        <a href="http://www.msit.mut.ac.th/#" class="dropdown-item"
+                            data-translate="วิทยาศาสตรมหาบัณฑิต สาขาวิชาความมั่นคงปลอดภัยไซเบอร์ (M.S. Cyber)">วิทยาศาสตรมหาบัณฑิต
+                            สาขาวิชาความมั่นคงปลอดภัยไซเบอร์ (M.S. Cyber)</a>
+                        <a href="http://www.msit.mut.ac.th/#" class="dropdown-item"
+                            data-translate="วิทยาศาสตรดุษฎีบัณฑิต สาขาวิชาเทคโนโลยีสารสนเทศ (PH.D. IT)">วิทยาศาสตรดุษฎีบัณฑิต
+                            สาขาวิชาเทคโนโลยีสารสนเทศ (PH.D. IT)</a>
+                    </div>
+                </div>
+                <div class="nav-item dropdown">
+                    <a href="http://www.msit.mut.ac.th/#" class="nav-link dropdown-toggle"
+                        data-bs-toggle="dropdown" data-translate="Certificate">Certificate</a>
+                    <div class="dropdown-menu border-0 rounded-0 rounded-bottom m-0">
+                        <a href="http://www.msit.mut.ac.th/#" class="dropdown-item"
+                            data-translate="Data Analytics">Data Analytics</a>
+                        <a href="http://www.msit.mut.ac.th/#" class="dropdown-item"
+                            data-translate="Cyber Security">Cyber Security</a>
+                        <a href="http://www.msit.mut.ac.th/#" class="dropdown-item"
+                            data-translate="สมัครเรียน Certificate">สมัครเรียน Certificate</a>
+                    </div>
+                </div>
+                <div class="nav-item dropdown">
+                    <a href="http://www.msit.mut.ac.th/#" class="nav-link dropdown-toggle"
+                        data-bs-toggle="dropdown" data-translate="บริการ">บริการ</a>
+                    <div class="dropdown-menu border-0 rounded-0 rounded-bottom m-0">
+                        <a href="http://www.msit.mut.ac.th/#" class="dropdown-item"
+                            data-translate="โครงงาน">โครงงาน</a>
+                        <a href="http://www.msit.mut.ac.th/#" class="dropdown-item"
+                            data-translate="E-Learning">E-Learning</a>
+                        <a href="http://www.msit.mut.ac.th/#" class="dropdown-item"
+                            data-translate="ข้อมูลหลักสูตร (มคอ)">ข้อมูลหลักสูตร (มคอ)</a>
+                        <a href="http://www.msit.mut.ac.th/thesis.php" class="dropdown-item"
+                            data-translate="เล่มสารนิพนธ์">เล่มสารนิพนธ์</a>
+                    </div>
+                </div>
+                <div class="nav-item dropdown">
+                    <a href="http://www.msit.mut.ac.th/#" class="nav-link dropdown-toggle"
+                        data-bs-toggle="dropdown" data-translate="ข่าวประขาสัมพันธ์">ข่าวประขาสัมพันธ์</a>
+                    <div class="dropdown-menu border-0 rounded-0 rounded-bottom m-0">
+                        <a href="http://www.msit.mut.ac.th/#" class="dropdown-item" data-translate="กิจกรรม">กิจกรรม</a>
+                        <a href="http://www.msit.mut.ac.th/#" class="dropdown-item" data-translate="ประกาศ">ประกาศ</a>
+                        <a href="http://www.msit.mut.ac.th/#" class="dropdown-item"
+                            data-translate="ปฏิทินภาคการศึกษา">ปฏิทินภาคการศึกษา</a>
+                        <a href="http://www.msit.mut.ac.th/#" class="dropdown-item"
+                            data-translate="ระเบียบ ข้อบังคับ">ระเบียบ ข้อบังคับ</a>
+                    </div>
+                </div>
+                <a href="http://www.msit.mut.ac.th/index.php#teacher" class="nav-item nav-link"
+                    data-translate="อาจารย์และเจ้าหน้าที่">อาจารย์และเจ้าหน้าที่</a>
+                <div class="nav-item dropdown">
+                    <a href="http://www.msit.mut.ac.th/#" class="nav-link dropdown-toggle"
+                        data-bs-toggle="dropdown" data-translate="การรับสมัคร">การรับสมัคร</a>
+                    <div class="dropdown-menu border-0 rounded-0 rounded-bottom m-0">
+                        <a href="http://www.msit.mut.ac.th/#" class="dropdown-item"
+                            data-translate="กำหนดการและขั้นตอนการสมัคร">กำหนดการและขั้นตอนการสมัคร</a>
+                        <a href="http://www.msit.mut.ac.th/#" class="dropdown-item"
+                            data-translate="ประมาณค่าใช้จ่ายทุกหลักสูตร">ประมาณค่าใช้จ่ายทุกหลักสูตร</a>
+                    </div>
+                </div>
+                <a href="http://www.msit.mut.ac.th/#" class="nav-item nav-link"
+                    data-translate="ติดต่อเรา">ติดต่อเรา</a>
+            </div>
+
+            <!-- Language Switcher -->
+            <div class="d-none d-lg-flex">  <!-- 仅在大型屏幕上显示 -->
+                <button class="btn btn-sm btn-light rounded-pill py-2 px-4 ms-3" onclick="changeLanguage('en')">English</button>
+                <button class="btn btn-sm btn-light rounded-pill py-2 px-4 ms-3" onclick="changeLanguage('zh')">中文</button>
+            </div>
+
+
+            <a href="https://mut.ac.th/admission/" target="_blank"
+                class="btn btn-sm btn-light rounded-pill py-2 px-4 d-none d-lg-block" data-translate="สมัครเรียน"><i
+                    class="fas fa-graduation-cap fa-2x"></i> สมัครเรียน</a>
+
+        </div>
+    </nav>
+
+    <!-- Navbar End -->
+<!-- Service Start -->
+    <div class="container-xxl py-5">
+        <div class="container">
+            <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px;">
+                <h6 class="section-title bg-white text-center text-primary px-3" data-translate="หลักสูตร">หลักสูตร</h6>
+            </div>
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <a class="service-item d-block rounded text-center h-100 p-4" href="http://www.msit.mut.ac.th/">
+                        <img class="img-fluid rounded mb-4" src="./MII Graduate School_files/msit.png" alt="">
+                        <h4 class="mb-0" data-translate="M.S. IT">M.S. IT</h4>
+                    </a>
+                </div>
+                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                    <a class="service-item d-block rounded text-center h-100 p-4" href="http://www.msit.mut.ac.th/">
+                        <img class="img-fluid rounded mb-4" src="./MII Graduate School_files/mcyber.png" alt="">
+                        <h4 class="mb-0" data-translate="M.S. Cyber">M.S. Cyber</h4>
+                    </a>
+                </div>
+                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
+                    <a class="service-item d-block rounded text-center h-100 p-4" href="http://www.msit.mut.ac.th/">
+                        <img class="img-fluid rounded mb-4" src="./MII Graduate School_files/phd.png" alt="">
+                        <h4 class="mb-0" data-translate="PH.D. IT">PH.D. IT</h4>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Service End -->
+<!-- 一年级学生资料 Start -->
+<div class="container-xxl py-5">
+    <div class="container">
+        <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px;">
+            <h6 class="section-title bg-white text-center text-primary px-3" data-translate="一年级学生资料">一年级学生资料</h6>
+        </div>
+        <div class="row g-4">
+            <!-- Student 1 -->
+            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                <div class="card">
+                    <img src="img/student1.png" class="card-img-top" alt="Student 1">
+                    <div class="card-body">
+                        <h5 class="card-title" data-translate="张三">张三</h5>
+                        <p class="card-text" data-translate="专业：计算机科学">专业：计算机科学</p>
+                        <p class="card-text" data-translate="简介：热爱编程">简介：热爱编程</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Student 2 -->
+            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.2s">
+                <div class="card">
+                    <img src="img/student2.png" class="card-img-top" alt="Student 2">
+                    <div class="card-body">
+                        <h5 class="card-title" data-translate="李四">李四</h5>
+                        <p class="card-text" data-translate="专业：软件工程">专业：软件工程</p>
+                        <p class="card-text" data-translate="简介：擅长团队合作">简介：擅长团队合作</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Student 3 -->
+            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                <div class="card">
+                    <img src="img/student3.png" class="card-img-top" alt="Student 3">
+                    <div class="card-body">
+                        <h5 class="card-title" data-translate="王五">王五</h5>
+                        <p class="card-text" data-translate="专业：数据科学">专业：数据科学</p>
+                        <p class="card-text" data-translate="简介：热衷数据分析">简介：热衷数据分析</p>
+                    </div>
+                </div>
+            </div>
+             <!-- Student 4 -->
+            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.4s">
+                <div class="card">
+                    <img src="img/student4.png" class="card-img-top" alt="Student 4">
+                    <div class="card-body">
+                        <h5 class="card-title" data-translate="赵六">赵六</h5>
+                        <p class="card-text" data-translate="专业：人工智能">专业：人工智能</p>
+                        <p class="card-text" data-translate="简介：研究AI的未来">简介：研究AI的未来</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Student 5 -->
+            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
+                <div class="card">
+                    <img src="img/student5.png" class="card-img-top" alt="Student 5">
+                    <div class="card-body">
+                        <h5 class="card-title" data-translate="孙七">孙七</h5>
+                        <p class="card-text" data-translate="专业：网络安全">专业：网络安全</p>
+                        <p class="card-text" data-translate="简介：关注网络安全威胁">简介：关注网络安全威胁</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Student 6 -->
+            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.6s">
+                <div class="card">
+                    <img src="img/student6.png" class="card-img-top" alt="Student 6">
+                    <div class="card-body">
+                        <h5 class="card-title" data-translate="周八">周八</h5>
+                        <p class="card-text" data-translate="专业：计算机工程">专业：计算机工程</p>
+                        <p class="card-text" data-translate="简介：对软硬件结合感兴趣">简介：对软硬件结合感兴趣</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Student 7 -->
+            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.7s">
+                <div class="card">
+                    <img src="img/student7.png" class="card-img-top" alt="Student 7">
+                    <div class="card-body">
+                        <h5 class="card-title" data-translate="吴九">吴九</h5>
+                        <p class="card-text" data-translate="专业：信息系统">专业：信息系统</p>
+                        <p class="card-text" data-translate="简介：致力于信息管理">简介：致力于信息管理</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <!-- Feature Start -->
+    <div class="container-xxl py-5">
+        <div class="container">
+            <div class="row g-5">
+                <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s"
+                    style="max-width: 600px; visibility: visible; animation-delay: 0.1s; animation-name: fadeInUp;">
+                    <h6 class="section-title bg-white text-center text-primary px-3" data-translate = "ข่าวประชาสัมพันธ์">ข่าวประชาสัมพันธ์</h6>
+                </div>
+                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s"
+                    style="visibility: visible; animation-delay: 0.1s; animation-name: fadeInUp;">
+                    <div class="h-100">
+                        <h1 class="display-6 mb-4" data-translate = "การสอบค้นคว้าอิสระ ของนักศึกษาระดับปริญญาโท">การสอบค้นคว้าอิสระ ของนักศึกษาระดับปริญญาโท</h1>
+                        <p class="mb-4" data-translate = "ขอเรียนเชิญนักศึกษาและคนที่สนใจเข้าฟังการสอบค้นคว้าอิสระ 2  เรื่อง  ระบบการบันทึกและอนุมัติการทำงานล่วงเวลา โดย  นายจักรกฤษณ์ ถาอ้น ในวันที่ 5 พฤศจิกายน 2566 เวลา 9.30-10.30 น. ที่ห้อง MIIX401: ห้องประชุมเล็ก">ขอเรียนเชิญนักศึกษาและคนที่สนใจเข้าฟังการสอบค้นคว้าอิสระ 2 เรื่อง ระบบการบันทึกและอนุมัติการทำงานล่วงเวลา โดย นายจักรกฤษณ์ ถาอ้น ในวันที่ 5 พฤศจิกายน 2566 เวลา 9.30-10.30 น. ที่ห้อง MIIX401: ห้องประชุมเล็ก</p>
+                    </div>
+                </div>
+                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.5s" style="visibility: hidden; animation-delay: 0.5s; animation-name: none;">
+                    <div class="img-border">
+                        <img class="img-fluid" src="./MII Graduate School_files/news3.jpg" alt="">
+                    </div>
+                </div>
+                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.5s" style="visibility: hidden; animation-delay: 0.5s; animation-name: none;">
+                    <div class="img-border">
+                        <img class="img-fluid" src="./MII Graduate School_files/news4.jpg" alt="">
+                    </div>
+                </div>
+                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s" style="visibility: hidden; animation-delay: 0.1s; animation-name: none;">
+                    <div class="h-100">
+                        <h1 class="display-6 mb-4" data-translate = "การสอบค้นคว้าอิสระ ของนักศึกษาระดับปริญญาโท">การสอบค้นคว้าอิสระ ของนักศึกษาระดับปริญญาโท</h1>
+                        <p class="mb-4" data-translate = "ขอเรียนเชิญนักศึกษาและคนที่สนใจเข้าฟังการสอบค้นคว้าอิสระ 2  เรื่อง การประเมินโอกาสการไม่ชำระค่าบริการอินเทอร์เน็ตของลูกค้าแบบรายเดือน  โดย  นางสาวพรรณทิพา วรรณสุทธิ์  ในวัน 5 พฤศจิกายน 2566 เวลา 10.30-11.30 น. ที่ห้อง MIIX401: ห้องประชุมเล็ก">ขอเรียนเชิญนักศึกษาและคนที่สนใจเข้าฟังการสอบค้นคว้าอิสระ 2 เรื่อง การประเมินโอกาสการไม่ชำระค่าบริการอินเทอร์เน็ตของลูกค้าแบบรายเดือน โดย นางสาวพรรณทิพา วรรณสุทธิ์ ในวัน 5 พฤศจิกายน 2566 เวลา 10.30-11.30 น. ที่ห้อง MIIX401: ห้องประชุมเล็ก</p>
+                    </div>
+                </div>
+                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s" style="visibility: hidden; animation-delay: 0.1s; animation-name: none;">
+                    <div class="h-100">
+                        <h1 class="display-6 mb-4" data-translate = "การสอบค้นคว้าอิสระ ของนักศึกษาระดับปริญญาโท">การสอบค้นคว้าอิสระ ของนักศึกษาระดับปริญญาโท</h1>
+                        <p class="mb-4" data-translate = "ขอเรียนเชิญนักศึกษาและคนที่สนใจเข้าฟังการสอบค้นคว้าอิสระ 2  เรื่อง การวิเคราะห์ความรู้สึกจากบทวิจารณ์และการให้คะแนนร้านอาหาร โดยใช้การเรียนรู้ของเครื่อง โดย  นายสรัล มีชัย ในวันที่ 5 พฤศจิกายน 2566 เวลา 11.30-12.30 น. ที่ห้อง MIIX401: ห้องประชุมเล็ก">ขอเรียนเชิญนักศึกษาและคนที่สนใจเข้าฟังการสอบค้นคว้าอิสระ 2 เรื่อง การวิเคราะห์ความรู้สึกจากบทวิจารณ์และการให้คะแนนร้านอาหาร โดยใช้การเรียนรู้ของเครื่อง โดย นายสรัล มีชัย ในวันที่ 5 พฤศจิกายน 2566 เวลา 11.30-12.30 น. ที่ห้อง MIIX401: ห้องประชุมเล็ก</p>
+                    </div>
+                </div>
+                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.5s" style="visibility: hidden; animation-delay: 0.5s; animation-name: none;">
+                    <div class="img-border">
+                        <img class="img-fluid" src="./MII Graduate School_files/news5.jpg" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Feature End -->
+
+    <!-- Team Start -->
+    <div class="container-xxl py-5">
+        <div class="container">
+            <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s"
+                style="max-width: 600px; visibility: hidden; animation-delay: 0.1s; animation-name: none;">
+                <h6 class="section-title bg-white text-center text-primary px-3" id="teacher"
+                    data-translate="อาจารย์และเจ้าหน้าที่">
+                    อาจารย์และเจ้าหน้าที่</h6>
+            </div>
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s"
+                    style="visibility: hidden; animation-delay: 0.1s; animation-name: none;">
+                    <div class="team-item text-center p-4">
+                        <img class="img-fluid border rounded-circle w-75 p-2 mb-4"
+                            src="./MII Graduate School_files/teacher1.jpg" alt="">
+                        <div class="team-text">
+                            <div class="team-title">
+                                <h5>รศ. ดร.วีระศักดิ์ คุรุธัช</h5>
+                                <span>ห้องพัก : Q302 / werasak@mut.ac.th</span>
+                            </div>
+                            <div class="team-social">
+                                <a class="btn btn-square btn-primary rounded-circle"
+                                    href="http://www.msit.mut.ac.th/" data-translate-title="ประวัติการศึกษา"><i
+                                        class="fas fa-user-graduate"></i></a>
+                                <a class="btn btn-square btn-primary rounded-circle"
+                                    href="http://www.msit.mut.ac.th/" data-translate-title="ประวัติการทำงาน"><i
+                                        class="fas fa-briefcase"></i></a>
+                                <a class="btn btn-square btn-primary rounded-circle"
+                                    href="http://www.msit.mut.ac.th/" data-translate-title="ประวัติการวิจัย"><i
+                                        class="far fa-file-alt"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s"
+                    style="visibility: hidden; animation-delay: 0.3s; animation-name: none;">
+                    <div class="team-item text-center p-4">
+                        <img class="img-fluid border rounded-circle w-75 p-2 mb-4"
+                            src="./MII Graduate School_files/teacher3.jpg" alt="">
+                        <div class="team-text">
+                            <div class="team-title">
+                                <h5>รศ. ดร.หมัดอามีน หมันหลิน</h5>
+                                <span>ห้องพัก: MIIX401/mudarmeen@mut.ac.th</span>
+                            </div>
+                            <div class="team-social">
+                                <a class="btn btn-square btn-primary rounded-circle"
+                                    href="http://www.msit.mut.ac.th/" data-translate-title="ประวัติการศึกษา"><i
+                                        class="fas fa-user-graduate"></i></a>
+                                <a class="btn btn-square btn-primary rounded-circle"
+                                    href="http://www.msit.mut.ac.th/" data-translate-title="ประวัติการทำงาน"><i
+                                        class="fas fa-briefcase"></i></a>
+                                <a class="btn btn-square btn-primary rounded-circle"
+                                    href="http://www.msit.mut.ac.th/" data-translate-title="ประวัติการวิจัย"><i
+                                        class="far fa-file-alt"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s"
+                    style="visibility: hidden; animation-delay: 0.5s; animation-name: none;">
+                    <div class="team-item text-center p-4">
+                        <img class="img-fluid border rounded-circle w-75 p-2 mb-4"
+                            src="./MII Graduate School_files/teacher5.jpg" alt="">
+                        <div class="team-text">
+                            <div class="team-title">
+                                <h5>รศ. ดร.สุชาดา สิทธิ์จงสถาพร</h5>
+                                <span>ห้องพัก : หอสมุด / suchada@mut.ac.th</span>
+                            </div>
+                            <div class="team-social">
+                                <a class="btn btn-square btn-primary rounded-circle"
+                                    href="http://www.msit.mut.ac.th/" data-translate-title="ประวัติการศึกษา"><i
+                                        class="fas fa-user-graduate"></i></a>
+                                <a class="btn btn-square btn-primary rounded-circle"
+                                    href="http://www.msit.mut.ac.th/" data-translate-title="ประวัติการทำงาน"><i
+                                        class="fas fa-briefcase"></i></a>
+                                <a class="btn btn-square btn-primary rounded-circle"
+                                    href="http://www.msit.mut.ac.th/" data-translate-title="ประวัติการวิจัย"><i
+                                        class="far fa-file-alt"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s"
+                    style="visibility: hidden; animation-delay: 0.1s; animation-name: none;">
+                    <div class="team-item text-center p-4">
+                        <img class="img-fluid border rounded-circle w-75 p-2 mb-4"
+                            src="./MII Graduate School_files/teacher2.jpg" alt="">
+                        <div class="team-text">
+                            <div class="team-title">
+                                <h5>ผศ. ดร.สุรชัย องกิตติกุล</h5>
+                                <span>ห้องพัก : MIIX401 / surachai@mut.ac.th</span>
+                            </div>
+                            <div class="team-social">
+                                <a class="btn btn-square btn-primary rounded-circle"
+                                    href="http://www.msit.mut.ac.th/" data-translate-title="ประวัติการศึกษา"><i
+                                        class="fas fa-user-graduate"></i></a>
+                                <a class="btn btn-square btn-primary rounded-circle"
+                                    href="http://www.msit.mut.ac.th/" data-translate-title="ประวัติการทำงาน"><i
+                                        class="fas fa-briefcase"></i></a>
+                                <a class="btn btn-square btn-primary rounded-circle"
+                                    href="http://www.msit.mut.ac.th/" data-translate-title="ประวัติการวิจัย"><i
+                                        class="far fa-file-alt"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s"
+                    style="visibility: hidden; animation-delay: 0.5s; animation-name: none;">
+                    <div class="team-item text-center p-4">
+                        <img class="img-fluid border rounded-circle w-75 p-2 mb-4"
+                            src="./MII Graduate School_files/nopic.jpg" alt="">
+                        <div class="team-text">
+                            <div class="team-title">
+                                <h5>ผศ. ดร.รังสิมันต์ สิทธิกร</h5>
+                                <span>ห้องพัก : MIIX401 / rungsimant@mut.ac.th</span>
+                            </div>
+                            <div class="team-social">
+                                <a class="btn btn-square btn-primary rounded-circle"
+                                    href="http://www.msit.mut.ac.th/" data-translate-title="ประวัติการศึกษา"><i
+                                        class="fas fa-user-graduate"></i></a>
+                                <a class="btn btn-square btn-primary rounded-circle"
+                                    href="http://www.msit.mut.ac.th/"
+                                    data-translate-title="ประวัติการทำงาน"><i
+                                    class="fas fa-briefcase"></i></a>
+                            <a class="btn btn-square btn-primary rounded-circle"
+                                href="http://www.msit.mut.ac.th/" data-translate-title="ประวัติการวิจัย"><i
+                                    class="far fa-file-alt"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s"
+                            style="visibility: hidden; animation-delay: 0.1s; animation-name: none;">
+                            <div class="team-item text-center p-4">
+                                <img class="img-fluid border rounded-circle w-75 p-2 mb-4"
+                                    src="./MII Graduate School_files/nopic.jpg" alt="">
+                                <div class="team-text">
+                                    <div class="team-title">
+                                        <h5>ดร.วินัย ศิลารวม</h5>
+                                        <span>ห้องพัก : F402 / vinai@mut.ac.th</span>
+                                    </div>
+                                    <div class="team-social">
+                                        <a class="btn btn-square btn-primary rounded-circle"
+                                            href="http://www.msit.mut.ac.th/" data-translate-title="ประวัติการศึกษา"><i
+                                                class="fas fa-user-graduate"></i></a>
+                                        <a class="btn btn-square btn-primary rounded-circle"
+                                            href="http://www.msit.mut.ac.th/" data-translate-title="ประวัติการทำงาน"><i
+                                                class="fas fa-briefcase"></i></a>
+                                        <a class="btn btn-square btn-primary rounded-circle"
+                                            href="http://www.msit.mut.ac.th/" data-translate-title="ประวัติการวิจัย"><i
+                                                class="far fa-file-alt"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s"
+                            style="visibility: hidden; animation-delay: 0.3s; animation-name: none;">
+                            <div class="team-item text-center p-4">
+                                <img class="img-fluid border rounded-circle w-75 p-2 mb-4"
+                                    src="./MII Graduate School_files/nopic.jpg" alt="">
+                                <div class="team-text">
+                                    <div class="team-title">
+                                        <h5>ดร.อนุรี หล่อสวัสดิ์ศิริ</h5>
+                                        <span>ห้องพัก : F402 / anuree@mut.ac.th</span>
+                                    </div>
+                                    <div class="team-social">
+                                        <a class="btn btn-square btn-primary rounded-circle"
+                                            href="http://www.msit.mut.ac.th/" data-translate-title="ประวัติการศึกษา"><i
+                                                class="fas fa-user-graduate"></i></a>
+                                        <a class="btn btn-square btn-primary rounded-circle"
+                                            href="http://www.msit.mut.ac.th/" data-translate-title="ประวัติการทำงาน"><i
+                                                class="fas fa-briefcase"></i></a>
+                                        <a class="btn btn-square btn-primary rounded-circle"
+                                            href="http://www.msit.mut.ac.th/" data-translate-title="ประวัติการวิจัย"><i
+                                                class="far fa-file-alt"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s"
+                            style="visibility: hidden; animation-delay: 0.5s; animation-name: none;">
+                            <div class="team-item text-center p-4">
+                                <img class="img-fluid border rounded-circle w-75 p-2 mb-4"
+                                    src="./MII Graduate School_files/nopic.jpg" alt="">
+                                <div class="team-text">
+                                    <div class="team-title">
+                                        <h5>ดร.จิรพัฒน์ แสงทอง</h5>
+                                        <span>ห้องพัก : MIIX401 / jirapats@mut.ac.th</span>
+                                    </div>
+                                    <div class="team-social">
+                                        <a class="btn btn-square btn-primary rounded-circle"
+                                            href="http://www.msit.mut.ac.th/" data-translate-title="ประวัติการศึกษา"><i
+                                                class="fas fa-user-graduate"></i></a>
+                                        <a class="btn btn-square btn-primary rounded-circle"
+                                            href="http://www.msit.mut.ac.th/" data-translate-title="ประวัติการทำงาน"><i
+                                                class="fas fa-briefcase"></i></a>
+                                        <a class="btn btn-square btn-primary rounded-circle"
+                                            href="http://www.msit.mut.ac.th/" data-translate-title="ประวัติการวิจัย"><i
+                                                class="far fa-file-alt"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s"
+                            style="visibility: hidden; animation-delay: 0.1s; animation-name: none;">
+                            <div class="team-item text-center p-4">
+                                <img class="img-fluid border rounded-circle w-75 p-2 mb-4"
+                                    src="./MII Graduate School_files/nopic.jpg" alt="">
+                                <div class="team-text">
+                                    <div class="team-title">
+                                        <h5>คุณอัญชลี สมสุข</h5>
+                                        <span>ห้องพัก : D705</span>
+                                    </div>
+                                    <div class="team-social">
+                                        <a class="btn btn-square btn-primary rounded-circle"
+                                            href="http://www.msit.mut.ac.th/" data-translate-title="ประวัติการศึกษา"><i
+                                                class="fas fa-user-graduate"></i></a>
+                                        <a class="btn btn-square btn-primary rounded-circle"
+                                            href="http://www.msit.mut.ac.th/" data-translate-title="ประวัติการทำงาน"><i
+                                                class="fas fa-briefcase"></i></a>
+                                        <a class="btn btn-square btn-primary rounded-circle"
+                                            href="http://www.msit.mut.ac.th/" data-translate-title="ประวัติการวิจัย"><i
+                                                class="far fa-file-alt"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Team End -->
+            
+            
+            <!-- Testimonial Start -->
+            <div class="container-xxl py-5">
+                <div class="container">
+                    <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s"
+                        style="max-width: 600px; visibility: hidden; animation-delay: 0.1s; animation-name: none;">
+                        <h6 class="section-title bg-white text-center text-primary px-3" data-translate = "ศิษย์เก่า">ศิษย์เก่า</h6>
+                    </div>
+                    <div class="owl-carousel testimonial-carousel wow fadeInUp owl-loaded owl-drag" data-wow-delay="0.1s"
+                        style="visibility: hidden; animation-delay: 0.1s; animation-name: none;">
+            
+            
+            
+                        <div class="owl-stage-outer">
+                            <div class="owl-stage"
+                                style="transition: 1s; width: 3459px; transform: translate3d(-864px, 0px, 0px);">
+                                <div class="owl-item cloned" style="width: 407.333px; margin-right: 25px;">
+                                    <div class="testimonial-item bg-light rounded p-4">
+                                        <div class="d-flex align-items-center mb-4">
+                                            <img class="flex-shrink-0 rounded-circle border p-1"
+                                                src="./MII Graduate School_files/alum_nok.jpg" alt="">
+                                            <div class="ms-4">
+                                                <h5 class="mb-1">ดุลวรรณ์ สกุลดี</h5>
+                                                <span>กรรมการบริษัทและผู้สอบบัญชีรับอนุญาตประจำ</span>
+                                            </div>
+                                        </div>
+                                        <p class="mb-0">บริษัท สำนักงาน บีเอฟเอ จำกัด</p>
+                                    </div>
+                                </div>
+                                <div class="owl-item cloned" style="width: 407.333px; margin-right: 25px;">
+                                    <div class="testimonial-item bg-light rounded p-4">
+                                        <div class="d-flex align-items-center mb-4">
+                                            <img class="flex-shrink-0 rounded-circle border p-1"
+                                                src="./MII Graduate School_files/alum_bank.jpg" alt="">
+                                            <div class="ms-4">
+                                                <h5 class="mb-1">แบ๊งค์ สันติวสุธา</h5>
+                                                <span>Technical Account Manager</span>
+                                            </div>
+                                        </div>
+                                        <p class="mb-0">CGA Thailand</p>
+                                    </div>
+                                </div>
+                                <div class="owl-item cloned active" style="width: 407.333px; margin-right: 25px;">
+                                    <div class="testimonial-item bg-light rounded p-4">
+                                        <div class="d-flex align-items-center mb-4">
+                                            <img class="flex-shrink-0 rounded-circle border p-1"
+                                                src="./MII Graduate School_files/alum_nok.jpg" alt="">
+                                            <div class="ms-4">
+                                                <h5 class="mb-1">ดุลวรรณ์ สกุลดี</h5>
+                                                <span>กรรมการบริษัทและผู้สอบบัญชีรับอนุญาตประจำ</span>
+                                            </div>
+                                        </div>
+                                        <p class="mb-0">บริษัท สำนักงาน บีเอฟเอ จำกัด</p>
+                                    </div>
+                                </div>
+                                <div class="owl-item active center" style="width: 407.333px; margin-right: 25px;">
+                                    <div class="testimonial-item bg-light rounded p-4">
+                                        <div class="d-flex align-items-center mb-4">
+                                            <img class="flex-shrink-0 rounded-circle border p-1"
+                                                src="./MII Graduate School_files/alum_bank.jpg" alt="">
+                                            <div class="ms-4">
+                                                <h5 class="mb-1">แบ๊งค์ สันติวสุธา</h5>
+                                                <span>Technical Account Manager</span>
+                                            </div>
+                                        </div>
+                                        <p class="mb-0">CGA Thailand</p>
+                                    </div>
+                                </div>
+                                <div class="owl-item active" style="width: 407.333px; margin-right: 25px;">
+                                    <div class="testimonial-item bg-light rounded p-4">
+                                        <div class="d-flex align-items-center mb-4">
+                                            <img class="flex-shrink-0 rounded-circle border p-1"
+                                                src="./MII Graduate School_files/alum_nok.jpg" alt="">
+                                            <div class="ms-4">
+                                                <h5 class="mb-1">ดุลวรรณ์ สกุลดี</h5>
+                                                <span>กรรมการบริษัทและผู้สอบบัญชีรับอนุญาตประจำ</span>
+                                            </div>
+                                        </div>
+                                        <p class="mb-0">บริษัท สำนักงาน บีเอฟเอ จำกัด</p>
+                                    </div>
+                                </div>
+                                <div class="owl-item cloned" style="width: 407.333px; margin-right: 25px;">
+                                    <div class="testimonial-item bg-light rounded p-4">
+                                        <div class="d-flex align-items-center mb-4">
+                                            <img class="flex-shrink-0 rounded-circle border p-1"
+                                                src="./MII Graduate School_files/alum_bank.jpg" alt="">
+                                            <div class="ms-4">
+                                                <h5 class="mb-1">แบ๊งค์ สันติวสุธา</h5>
+                                                <span>Technical Account Manager</span>
+                                            </div>
+                                        </div>
+                                        <p class="mb-0">CGA Thailand</p>
+                                    </div>
+                                </div>
+                                <div class="owl-item cloned" style="width: 407.333px; margin-right: 25px;">
+                                    <div class="testimonial-item bg-light rounded p-4">
+                                        <div class="d-flex align-items-center mb-4">
+                                            <img class="flex-shrink-0 rounded-circle border p-1"
+                                                src="./MII Graduate School_files/alum_nok.jpg" alt="">
+                                            <div class="ms-4">
+                                                <h5 class="mb-1">ดุลวรรณ์ สกุลดี</h5>
+                                                <span>กรรมการบริษัทและผู้สอบบัญชีรับอนุญาตประจำ</span>
+                                            </div>
+                                        </div>
+                                        <p class="mb-0">บริษัท สำนักงาน บีเอฟเอ จำกัด</p>
+                                    </div>
+                                </div>
+                                <div class="owl-item cloned" style="width: 407.333px; margin-right: 25px;">
+                                    <div class="testimonial-item bg-light rounded p-4">
+                                        <div class="d-flex align-items-center mb-4">
+                                            <img class="flex-shrink-0 rounded-circle border p-1"
+                                                src="./MII Graduate School_files/alum_bank.jpg" alt="">
+                                            <div class="ms-4">
+                                                <h5 class="mb-1">แบ๊งค์ สันติวสุธา</h5>
+                                                <span>Technical Account Manager</span>
+                                            </div>
+                                        </div>
+                                        <p class="mb-0">CGA Thailand</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="owl-nav disabled">
+                            <div class="owl-prev"><i class="bi bi-chevron-left"></i></div>
+                            <div class="owl-next"><i class="bi bi-chevron-right"></i></div>
+                        </div>
+                        <div class="owl-dots disabled"></div>
+                    </div>
+                </div>
+            </div>
+            <!-- Testimonial End -->
+            <!-- Footer Start -->
+            <div class="container-fluid bg-dark text-body footer mt-5 pt-5 wow fadeIn" data-wow-delay="0.1s"
+                style="visibility: hidden; animation-delay: 0.1s; animation-name: none;">
+                <div class="container py-5">
+                    <div class="row g-5">
+                        <div class="col-lg-4 col-md-6">
+                            <h5 class="text-light mb-4" data-translate="Address">Address</h5>
+                            <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>140 Cheum-Sampan Rd., Nong Chok, Bangkok
+                                10530</p>
+                            <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>0-2988-3655 Ext. 1201</p>
+                            <p class="mb-2"><i class="fa fa-envelope me-3"></i>itgrad@mut.ac.th</p>
+                            <div class="d-flex pt-2">
+                                <a class="btn btn-square btn-outline-secondary rounded-circle me-1"
+                                    href="http://www.msit.mut.ac.th/"><i class="fab fa-twitter"></i></a>
+                                <a class="btn btn-square btn-outline-secondary rounded-circle me-1"
+                                    href="https://www.facebook.com/profile.php?id=100086989477676" target="_blank"><i
+                                        class="fab fa-facebook-f"></i></a>
+                                <a class="btn btn-square btn-outline-secondary rounded-circle me-1"
+                                    href="http://www.msit.mut.ac.th/"><i class="fab fa-youtube"></i></a>
+                                <a class="btn btn-square btn-outline-secondary rounded-circle me-0"
+                                    href="http://www.msit.mut.ac.th/"><i class="fab fa-linkedin-in"></i></a>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6">
+                            <h5 class="text-light mb-4" data-translate="Quick Links">Quick Links</h5>
+                            <a class="btn btn-link" href="http://www.msit.mut.ac.th/" data-translate="About Us">About Us</a>
+                            <a class="btn btn-link" href="http://www.msit.mut.ac.th/" data-translate="Contact Us">Contact Us</a>
+                            <a class="btn btn-link" href="http://www.msit.mut.ac.th/" data-translate="Our Services">Our
+                                Services</a>
+                            <a class="btn btn-link" href="http://www.msit.mut.ac.th/" data-translate="Terms & Condition">Terms
+                                & Condition</a>
+                            <a class="btn btn-link" href="http://www.msit.mut.ac.th/" data-translate="Support">Support</a>
+                        </div>
+                        <div class="col-lg-4 col-md-6">
+                            <h5 class="text-light mb-4" data-translate="Newsletter">Newsletter</h5>
+                            <p data-translate="Dolor amet sit justo amet elitr clita ipsum elitr est.">Dolor amet sit justo amet
+                                elitr clita ipsum elitr est.</p>
+                            <div class="position-relative mx-auto" style="max-width: 400px;">
+                                <input class="form-control bg-transparent border-secondary w-100 py-3 ps-4 pe-5" type="text"
+                                    placeholder="Your email" data-translate-placeholder = "Your email">
+                                <button type="button" class="btn btn-primary py-2 position-absolute top-0 end-0 mt-2 me-2" data-translate = "SignUp">SignUp</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="container-fluid copyright">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                                © <a href="http://www.msit.mut.ac.th/#">MII Graduate School</a>, All Right Reserved.
+                                <br>2023 - 2025
+                            </div>
+                            <div class="col-md-6 text-center text-md-end">
+                                Designed By <a href="https://htmlcodex.com/">HTML Codex</a>
+                                <br>Distributed By: <a class="border-bottom" href="https://themewagon.com/"
+                                    target="_blank">ThemeWagon</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Footer End -->
+            
+            
+            <!-- Back to Top -->
+            <a href="http://www.msit.mut.ac.th/#" class="btn btn-lg btn-primary btn-lg-square rounded-circle back-to-top"><i
+                    class="bi bi-arrow-up"></i></a>
+            
+            
+            <!-- JavaScript Libraries -->
+            <script src="./MII Graduate School_files/jquery-3.4.1.min.js"></script>
+            <script src="./MII Graduate School_files/bootstrap.bundle.min.js"></script>
+            <script src="./MII Graduate School_files/wow.min.js"></script>
+            <script src="./MII Graduate School_files/easing.min.js"></script>
+            <script src="./MII Graduate School_files/waypoints.min.js"></script>
+            <script src="./MII Graduate School_files/counterup.min.js"></script>
+            <script src="./MII Graduate School_files/owl.carousel.min.js"></script>
+            <script src="./MII Graduate School_files/lightbox.min.js"></script>
+            
+            <!-- Template Javascript -->
+            <script src="./MII Graduate School_files/main.js"></script>
+            
+            <div id="lightboxOverlay" class="lightboxOverlay" style="display: none;"></div>
+            <div id="lightbox" class="lightbox" style="display: none;">
+                <div class="lb-outerContainer">
+                    <div class="lb-container"><img class="lb-image"
+                            src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==">
+                        <div class="lb-nav"><a class="lb-prev" href="http://www.msit.mut.ac.th/"></a><a class="lb-next"
+                                href="http://www.msit.mut.ac.th/"></a></div>
+                        <div class="lb-loader"><a class="lb-cancel"></a></div>
+                    </div>
+                </div>
+                <div class="lb-dataContainer">
+                    <div class="lb-data">
+                        <div class="lb-details"><span class="lb-caption"></span><span class="lb-number"></span></div>
+                        <div class="lb-closeContainer"><a class="lb-close"></a></div>
+                    </div>
+                </div>
+            </div>
+            </body>
+            
+            </html>
